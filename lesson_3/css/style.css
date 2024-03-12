@@ -1,0 +1,51 @@
+/* Скидання стилів */
+@import url("reset.css");
+
+
+/* Header */
+
+.imp-quote {
+	color: chocolate !important;
+}
+
+ul, span {
+	color: red;
+}
+li  li {
+	color: green;
+}
+.main-title {
+	color: green;
+}
+
+div > p {
+	color: orange;
+}
+
+p + ul {
+	color: violet;
+}
+
+p ~ p{
+	color: blueviolet;
+}
+
+span.imp-fact {
+	color: lightseagreen;
+}
+
+[class*='section'] {
+	color: rgb(255, 223, 196);
+}
+
+div h3 {
+	color: rgb(0, 255, 85);
+}
+
+[title~='всі'] {
+	color: chartreuse;
+}
+
+footer > p {
+	color: dodgerblue;
+}
