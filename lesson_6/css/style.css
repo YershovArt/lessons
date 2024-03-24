@@ -1,0 +1,326 @@
+/* Fonts */
+
+/* local fonts */
+@import url("fonts.css");
+/* fonts from plugin */
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,regular,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700&display=swap");
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+	font-family: 'Proxima Nova', sans-serif;
+	font-weight: 400;
+	color: #2b2929;
+}
+
+/* Header */
+header {
+	background-color: #2b2929;
+	padding: 10px;
+}
+
+.nav {
+	font-size: 0;
+}
+
+header .nav>li {
+	display: inline-block;
+	font-weight: 500;
+	font-size: 20px;
+	color: antiquewhite;
+	width: 33%;
+	text-align: center;
+}
+
+/* Collections */
+.wrapper-colletions {
+	background-color: rgba(30, 40, 50, 0.05);
+	font-size: 16px;
+	color: #000;
+	font-family: "Roboto",sans-serif;
+}
+
+#coral-colections {
+	background: url('../img/coral/vector-one.png') left bottom no-repeat , url('../img/coral/vector-two.png') right center no-repeat;
+	padding-bottom: 60px;
+}
+
+.container-collections {
+	font-size: 0;
+	max-width: 1320px;
+	padding-right: 94px;
+	padding-top: 20px;
+	margin: 0 auto;
+}
+
+.collections-item {
+	padding-top: 20px;
+	display: inline-block;
+	width: 56%;
+	margin-right: 108px;
+	/* тут 108 так як від'ємне значення для img  у якому лежить картинка  робив по наданому прикладу.*/
+	vertical-align: middle;
+}
+
+.collections .main-title {
+	font-size: 74px;
+	margin-bottom: 52px;
+	font-weight: 300;
+}
+
+.collections-text {	
+	margin-bottom: 66px;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 1.83333333; /* 55/30 */
+	text-transform: capitalize;
+}
+
+.collections-button {
+	text-align: center;
+	font-size: 29px;
+	color: #fff;
+	display: inline-block;
+	padding: 19px 26px 19px 64px;
+	background: #1E2832 url('../img/coral/icon.png') no-repeat 28px;
+}
+
+.image-box {
+	border: 2px solid rgba(0, 0, 0, 0.25);
+	display: inline-block;
+	border-radius: 160px 0 160px 0;
+	vertical-align: middle;
+}
+
+.collections-image {
+	border-radius: 160px 0 160px 0;
+	width: 100%;
+	margin: -20px 18px 20px -18px;
+}
+
+/* edu explore */
+
+.wrapper-explore {
+	font-family: "Quicksand",sans-serif;
+	color: #fff;
+	background: url('../img/explore/explore-courses-section_letters.png') no-repeat center, url('../img/explore/explore-courses-section.png') repeat 0 0/ cover;
+}
+
+.container-explore {
+	max-width: 1280px;
+	margin: 0 auto;
+	font-size: 0;
+	background: url('../img/explore/alphabet-patterns.png') no-repeat 147% 19%;
+}
+
+.explore-item {
+	display: inline-block;
+	margin-right: 131px;
+	width: 47%;
+	vertical-align: middle;
+}
+
+.container-explore .secondary-title {
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.20; /* 48/40 */
+	margin-bottom: 24px;
+}
+
+.explore-text {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.60; /* 32/20 */
+	margin-bottom: 24px;
+}
+
+.explore-button {
+	color: #0d1216;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.5625; /* 25/16 */
+	padding: 12px 20px 12px 40px;
+	display: inline-block;
+	min-height: 17px;
+	background:#fff url('../img/explore/button-icon.png') no-repeat 20px;
+	border-radius: 8px;
+}
+
+.explore-image {
+	vertical-align: middle;
+}
+
+/* page with room crovatto */
+.wrapper.room {
+	background-color: #F8F8F8;
+}
+
+.section.room {
+	max-width: 1070px;
+	margin: 0 auto;
+}
+
+[class*='-title'] {
+	font-size: 40px;
+	line-height: 1.2;
+	/* 48/40 */
+	margin-bottom: 40px;
+}
+
+.container-crovatto,
+.img-container {
+	margin-bottom: 40px;
+}
+
+.container-crovatto.last {
+	margin-bottom: 0;
+}
+
+.third-title {
+	font-size: 20px;
+	line-height: 1.4;
+	/* 28/20 */
+	margin-bottom: 30px;
+}
+
+.crovatto-text>p,
+.list-crovatto>li {
+	/* color: #2b2929;
+	font-size: 16px; */
+	line-height: 1.875;
+	/* 30/16 */
+	margin-bottom: 10px;
+}
+
+.list-crovatto {
+	margin-bottom: 40px;
+}
+
+.list-crovatto>li {
+	margin-bottom: 20px;
+	background: url('../img/living-room/mark.png') no-repeat left top;
+	min-height: 32px;
+	padding-left: 47px;
+}
+
+.crovatto-text.last>p {
+	margin-bottom: 0;
+}
+
+footer a {
+	text-decoration: underline;
+	color: chocolate;
+	text-decoration-color: black;
+	text-decoration-style: wavy;
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+/* page with list of good sliderlike */
+#discounts-instagramm {
+	background-color: rgba(30, 40, 50, 0.05);
+	padding-top: 100px;
+	padding-bottom: 70px;
+	/* padding-bottom вказав з естетичних міркувань, якщо б верстав увесь блок то вказавби марджин для container-images*/
+
+}
+
+.container-discounts {
+	max-width: 1320px;
+	margin: 0 auto;
+}
+
+.container-discounts>.secondary-title {
+	color: #000;
+	font-size: 50px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.container-images {
+	font-size: 0;
+	margin-right: -12px;
+	margin-left: -12px;
+}
+
+.image-item {
+	display: inline-block;
+	padding-right: 12px;
+	padding-left: 12px;
+	min-width: 16.6666666667%;
+}
+
+footer p {
+	text-align: center;
+	padding: 20px;
+	background-color: antiquewhite;
+}
+
+footer a {
+	text-decoration: underline;
+	color: chocolate;
+	text-decoration-color: black;
+	text-decoration-style: wavy;
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+/* Poligon for practise */
+.wrapper-poligon {
+	margin: 500px 0
+}
+
+.blocks-width-height .block-1 {
+	max-height: 50px;
+	max-width: 100px;
+	background-color: red;
+	margin-bottom: 200px;
+}
+
+.blocks-width-height .block-2 {
+	max-height: 50px;
+	max-width: 100px;
+	background-color: green;
+	overflow-y: scroll;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+.blocks {
+	background-color: aqua;
+
+}
+
+.blocks .block-3,
+.blocks .block-4,
+.blocks .block-5,
+.blocks .block-6,
+.blocks .block-7 {
+	display: inline-block;
+	background-color: rgb(255, 183, 0);
+	width: 24%;
+	margin-right: 10px;
+}
+
+.blocks .block-3 {
+	vertical-align: top;
+}
+
+.blocks .block-4 {
+	vertical-align: middle;
+}
+
+.blocks .block-5 {
+	vertical-align: bottom;
+}
+
+.blocks .block-6 {
+	vertical-align: baseline;
+}
+
+.blocks .block-7 {
+	display: none;
+}
