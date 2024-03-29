@@ -488,8 +488,6 @@ footer a {
 	display: block;
 }
 
-
-
 .poligon-text:not(.second) p:last-child {
 	background-color: red;
 }
@@ -514,9 +512,6 @@ footer a {
 	font-weight: 700;
 }
 
-.poligon-text:has(span) {
-	background: rgb(36, 0, 128);
-}
 
 .poligon-text:has(span) *:nth-last-child(8) {
 	color: #fff;
