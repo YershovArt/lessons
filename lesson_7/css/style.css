@@ -236,6 +236,7 @@ header .nav>li {
 
 .img-container>img {
 	border-radius: 8px;
+	width: 100%;
 }
 
 .third-title {
@@ -244,7 +245,6 @@ header .nav>li {
 	/* 28/20 */
 	margin-bottom: 30px;
 }
-
 .crovatto-text>p,
 .list-crovatto>li {
 	line-height: 1.875;
@@ -488,7 +488,9 @@ footer a {
 	display: block;
 }
 
-.poligon-text:not(:has(span)) p:last-child {
+
+
+.poligon-text:not(.second) p:last-child {
 	background-color: red;
 }
 
@@ -512,10 +514,10 @@ footer a {
 	font-weight: 700;
 }
 
-.poligon-text:has(span) :nth-child(odd) {
+.poligon-text:has(span) {
 	background: rgb(36, 0, 128);
 }
 
-.poligon-text:has(span) p:nth-last-child(8) {
+.poligon-text:has(span) *:nth-last-child(8) {
 	color: #fff;
 }
