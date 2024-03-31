@@ -1,0 +1,66 @@
+/* Fonts */
+
+/* fonts from plugin */
+
+@import url("https://fonts.googleapis.com/css?family=Orbitron:500&display=swap");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+	font-family: sans-serif;
+	font-weight: 400;
+	color: #2b2929;
+	background-color: aliceblue;
+}
+
+/* Header */
+header {
+	background-color: wheat;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.primary-title {
+	text-align: center;
+	font-size: 48px;
+	line-height: 1.25; /* 60/48 */
+}
+
+/* for img  */
+.section {
+	max-width: 900px;
+	margin: 0 auto;
+	outline: 1px solid wheat;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.section__item:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.section__item *{
+	display: inline-block;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+.section__item img {
+	width: 10%;
+}
+
+.section__item:first-child img{ 
+	width: 20%;
+}
+
+.section__item-last *{
+	width: 100%;
+}
+
+.secondary-title {
+	text-align: center;
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 1.2; /* 48/40 */
+}
