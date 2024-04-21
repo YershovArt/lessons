@@ -1,0 +1,48 @@
+/* timing-function delay */
+
+@keyframes move {
+	from {
+		transform: translate(0);
+	}
+
+	to {
+		transform: translate(700px);
+
+		opacity: .8;
+	}
+}
+/* ----------------fill------------------------ */
+
+@keyframes move2 {
+	from {
+		transform: translate(0);
+	}
+
+	to {
+		transform: translate(700px);
+		background-color: beige;
+	}
+}
+
+@keyframes move3 {
+	from {
+		transform: translate(-50px);
+	}
+
+	to {
+		transform: translate(700px);
+		background-color: beige;
+	}
+}
+/* card flipping */
+@keyframes flip-card {
+	to {
+		transform: rotateY(0deg);
+	}
+}
+
+@keyframes flip-card-second {
+	to {
+		transform: rotateY(-180deg);
+	}
+}

@@ -1,0 +1,654 @@
+@import url('fonts.css');
+@import url('reset.css');
+@import url('animation.css');
+@import url('slider.css');
+@import url('car.css');
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	font-family: "Proxima Nova";
+	color: #2B2929;
+	background-color: #2B2929;
+}
+
+/* ------------------------ */
+
+.page {
+	width: 1290px;
+	margin: 0 auto;
+}
+
+.first,
+.second,
+.third,
+.fourth,
+.fifth,
+.sixth,
+.seventh {
+	margin-bottom: 40px;
+	padding: 30px;
+	border: 1px solid white;
+}
+
+.title {
+	font-size: 30px;
+	color: aliceblue;
+	margin-bottom: 60px;
+}
+
+p.info {
+	font-size: 21px;
+	color: white;
+	margin-bottom: 30px;
+}
+
+.block {
+	width: 300px;
+	height: 300px;
+	background-color: rgba(255, 255, 255, 0.2);
+	display: inline-block;
+	margin-right: 100px;
+	margin-bottom: 50px;
+	vertical-align: middle;
+	font-size: 25px;
+}
+
+.block__item {
+	width: 300px;
+	height: 300px;
+	background: #7a956b;
+	display: inline-block;
+	margin-bottom: 40px;
+	font-size: 25px;
+	line-height: 106.666667%;
+	vertical-align: middle;
+	/* 32/30 */
+}
+
+/* -----------translate-------------*/
+.block--small {
+	font-size: 20px;
+	width: 350px;
+	height: 60px;
+	margin-bottom: 15px;
+	display: block;
+	animation: move 7s 3;
+	text-align: center;
+}
+
+.block--timing-function-one {
+	background-color: red;
+	animation-timing-function: ease;
+}
+
+.block--timing-function-two {
+	background-color: orange;
+	animation-timing-function: ease-in;
+}
+
+.block--timing-function-three {
+	background-color: yellow;
+	animation-timing-function: ease-out;
+}
+
+.block--timing-function-four {
+	background-color: green;
+	animation-timing-function: ease-in-out;
+}
+
+.block--timing-function-five {
+	background-color: skyblue;
+	animation-timing-function: linear;
+}
+
+.block--timing-function-six {
+	background-color: blue;
+	animation-timing-function: cubic-bezier(1.000, -0.510, 0.445, 0.155);
+}
+
+.block--timing-function-seven {
+	background-color: violet;
+	animation-timing-function: step-start;
+}
+
+.block--timing-function-eight {
+	background-color: cyan;
+	animation-timing-function: step-end;
+}
+
+.block--timing-function-nine {
+	background-color: pink;
+	animation-timing-function: steps(7, end);
+}
+
+.block--timing-function-ten {
+	background-color: pink;
+	animation-timing-function: steps(7, start);
+}
+
+
+
+/* -----------Delay-------------*/
+
+.block--delay-one {
+	background-color: red;
+	animation-delay: 1s;
+}
+
+.block--delay-two {
+	background-color: orange;
+	animation-delay: 2s;
+}
+
+.block--delay-three {
+	background-color: yellow;
+	animation-delay: 3s;
+}
+
+.block--delay-four {
+	background-color: green;
+	animation-delay: 4s;
+}
+
+.block--delay-five {
+	background-color: skyblue;
+	animation-delay: -4s;
+}
+
+/* ------------Animation iteration count and direction------------ */
+.block--direction-one {
+	background-color: red;
+	animation-iteration-count: 3;
+}
+
+.block--direction-two {
+	background-color: orange;
+	animation-iteration-count: infinite;
+}
+
+.block--direction-three {
+	background-color: yellow;
+	animation-iteration-count: 3;
+	animation-direction: alternate;
+}
+
+.block--direction-four {
+	background-color: green;
+	animation-iteration-count: 3;
+	animation-direction: alternate-reverse;
+}
+
+.block--direction-five {
+	background-color: skyblue;
+	animation-iteration-count: 3;
+	animation-direction: reverse;
+}
+
+.block--direction-six {
+	background-color: blue;
+	animation-iteration-count: 3;
+	animation-direction: normal;
+}
+
+/* ------------animation fill mode------------ */
+
+.block--small-fill {
+	font-size: 20px;
+	width: 350px;
+	height: 60px;
+	margin-bottom: 15px;
+	display: block;
+	text-align: center;
+}
+
+.block--fill-one {
+	background-color: red;
+	animation: move2;
+	animation-iteration-count: 1;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+.block--fill-two {
+	background-color: orange;
+	animation-name: move3;
+	animation-delay: 1.5s;
+	animation-duration: 3s;
+	animation-fill-mode: backwards;
+}
+
+.block--fill-three {
+	background-color: yellow;
+	animation-name: move3;
+	animation-delay: 1.5s;
+	animation-duration: 3s;
+	animation-fill-mode: both;
+}
+
+.block--fill-four {
+	background-color: green;
+	animation-name: move3;
+	animation-delay: 1.5s;
+	animation-duration: 3s;
+	animation-fill-mode: none;
+}
+
+.block--fill-four:hover {
+	animation-play-state: paused;
+}
+
+
+/* ------------fifth------------ */
+
+.card {
+	padding: 30px;
+}
+
+.card__body {
+	position: relative;
+	width: 200px;
+	perspective: 800px;
+}
+
+.card__body img {
+	width: 100%;
+}
+
+.card__front {
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	animation-name: flip-card;
+}
+
+.card__back {
+	position: absolute;
+	transform: rotateY(0deg);
+	top: 0;
+	left: 0;
+	animation-name: flip-card-second;
+}
+
+.card__back,
+.card__front {
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+}
+
+/* -------------seventh--------------------------- */
+
+/* ------------------------------------seventh------------------------------------------ */
+
+.seventh {
+	font-size: 20px;
+	color: #c0c0c0;
+}
+
+.container {}
+
+.content {}
+
+.content__slider {
+	background-color: #2B2929;
+	border: 5px solid lightcoral;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+	width: 900px;
+	height: 605px;
+	margin: 40px auto 0;
+	overflow: visible;
+	position: relative;
+}
+
+.content__mask {
+	height: 596px;
+	overflow: hidden;
+}
+
+.content__slider li {
+	width: 900px;
+	height: 596px;
+	position: absolute;
+}
+
+
+.content__slide-show {
+	position: relative;
+}
+
+.content__anim {}
+
+/* 
+5 картинок 
+25 секунд = 100%
+
+*/
+
+.content__slider li#sg01 {
+	animation: c01 25s linear infinite;
+}
+
+.content__slider li#sg02 {
+	animation: c02 25s linear infinite;
+}
+
+.content__slider li#sg03 {
+	animation: c03 25s linear infinite;
+}
+
+.content__slider li#sg04 {
+	animation: c04 25s linear infinite;
+}
+
+.content__slider li#sg05 {
+	animation: c05 25s linear infinite;
+}
+
+.progress-bar {
+	position: relative;
+	top: -5px;
+	width: 890px;
+	height: 5px;
+	background-color: #fff;
+	animation: pbar 25s ease-out infinite;
+}
+
+.content__slider figcaption {
+	background-color: rgba(255, 255, 255, .8);
+	border-radius: 0 5px 5px 0;
+	width: 300px;
+	height: 60px;
+	position: relative;
+	bottom: 75px;
+	left: -597px;
+	transition: all 500ms ease-in-out;
+}
+
+.content__slider figcaption h2 {
+	color: #2B2929;
+	font-size: 24px;
+	line-height: 250%;
+	/* 60/24 */
+	padding: 0 0 0 10px;
+}
+
+.content__slider li.content__anim:hover figcaption {
+	left: 0;
+}
+
+.content__slider:hover li.content__anim,
+.content__slider:hover .progress-bar {
+	animation-play-state: paused !important;
+}
+
+/* ------------------------------------eights------------------------------------------ */
+.car-container {
+	margin-top: 200px;
+	width: 100%;
+	outline: 2px solid red;
+	background: url('../img/car/jurassicbg.jpg') center /cover no-repeat;
+	position: relative;
+	perspective: 400px;
+	min-height: 1000px;
+	padding: 30px;
+}
+
+.ptero {
+	transform: scale(5);
+	width: 72px;
+	height: 65px;
+	position: relative;
+	top: 500px;
+	left: 100px;
+	overflow: hidden;
+	animation: ptero 10s infinite;
+}
+.ptero__pterodactyl {
+	animation: pterodactyl 1s steps(6) infinite;
+}
+
+.car {
+	width: 1800px;
+	/* машина */
+	position: absolute;
+	min-height: 640px;
+	transform: scale(0.1) translate(0);
+	perspective: 400px;
+	top: 30%;
+	animation: car 10s infinite;
+}
+
+.dinosur {
+	position: absolute;
+	top: -206px;
+	transform: scale(5) translate(110%);
+	opacity: 0;
+	animation: dinosur 10s infinite;
+}
+
+.top {
+	font-size: 0;
+}
+
+.top__item {
+	height: 200px;
+	background-color: #47c7fc;
+	display: inline-block;
+	transform: translate(531px, 40px) rotate(0deg);
+}
+
+.top__item--left {
+	width: 508px;
+	border-top-left-radius: 100%;
+	perspective: 400px;
+}
+
+.saloon {
+	background: black url('../img/car/grant.webp') 80% 30%/ 50% no-repeat;
+	width: 488px;
+	height: 180px;
+	border: 4px solid black;
+	border-top-left-radius: 100%;
+	transform: translate(12px, 14px);
+	position: relative;
+}
+
+.message {
+	position: absolute;
+	width: 250px;
+	height: 100px;
+	background-color: #fff;
+	color: #2B2929;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.message--dino {
+	opacity: 0;
+	font-size: 20px;
+	animation: message-dino 10s infinite;
+	height: 25px;
+}
+
+.message--doctor {
+	opacity: 0;
+	animation: message-doctor 10s infinite;
+}
+
+.glass--left {
+	background-color: #c0c0c0;
+	width: 488px;
+	height: 180px;
+	border: 4px solid black;
+	border-top-left-radius: 100%;
+	transform: translate(-4px,-4px) scale(1);
+	animation: glass-left 10s infinite;
+}
+
+.door--left {
+	transform-origin: left;
+}
+
+.door__lower-part-left {
+	width: 488px;
+	height: 280px;
+	border: 4px solid black;
+	transform: translate(12px, 13px);
+	border-radius: 100% 0% 89% 11% / 0% 30% 70% 100%;
+	background-color: #ff8000;
+}
+
+.door__handle-space {
+	border-radius: 50%;
+	width: 106px;
+	height: 25px;
+	background-color: rgb(120, 124, 130);
+	transform: translate(365px, 36px);
+}
+
+.door__handle {
+	width: 100px;
+	height: 15px;
+	background-color: black;
+	transform: translate(368px, 16px);
+	border-radius: 50%;
+}
+
+.top__item--right {
+	width: 305px;
+	border-top-right-radius: 100%;
+}
+
+.glass--right {
+	background-color: #c0c0c0;
+	width: 135px;
+	height: 180px;
+	outline: 1px solid black;
+	transform: translate(16px, 14px);
+	border: 3px solid black;
+	border-radius: 37% 63% 100% 0% / 0% 79% 21% 100%;
+	transform: translate(-7px, 15px);
+}
+
+.middle {
+	font-size: 0;
+}
+
+.middle__item {
+	background-color: #47c7fc;
+	display: inline-block;
+}
+
+.middle__item--top-left {
+	width: 564px;
+	height: 180px;
+	border-top-left-radius: 100%;
+}
+
+.middle__carlight {
+	background-color: #c0c0c0;
+	width: 100px;
+	height: 50px;
+	border: 1px solid black;
+	border-radius: 100% 0% 100% 0% / 100% 31% 69% 0%;
+	transform: translate(50px, 75px);
+}
+
+.middle__item--top-middle {
+	width: 508px;
+	height: 180px;
+	border-top-left-radius: 3%;
+}
+
+.middle__item--top-right {
+	width: 528px;
+	height: 180px;
+	border-top-right-radius: 50%;
+}
+
+.middle__carlight {
+	background-color: #c0c0c0;
+	width: 100px;
+	height: 50px;
+	border: 1px solid black;
+	border-radius: 100% 0% 100% 0% / 100% 31% 69% 0%;
+	transform: translate(50px, 75px);
+}
+
+.middle__carlight--left {
+	background-color: red;
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	border-radius: 87% 13% 100% 0% / 0% 100% 0% 100%;
+	transform: translate(480px, 75px);
+}
+
+.middle__item--bottom-left {
+	width: 384px;
+	height: 150px;
+	border-bottom-left-radius: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.middle__item--bottom-middle {
+	width: 688px;
+	height: 150px;
+	overflow-y: hidden;
+}
+
+.middle__item--bottom-right {
+	width: 528px;
+	height: 150px;
+	border-bottom-right-radius: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.smoke {
+	width: 200px;
+	height: 100px;
+	animation: smoke 10s infinite;
+	opacity: 0;
+	display: inline-block;
+}
+
+.arc {
+	width: 282px;
+	height: 282px;
+	background-color: #2B2929;
+	opacity: 0.9;
+	border-radius: 50%;
+	z-index: 10;
+}
+
+.arc--left {
+	transform: translate(103px, 5px);
+}
+
+.arc--right {
+	transform: translate(45px, 5px);
+}
+
+.wheel {
+	width: 240px;
+	height: 240px;
+	background-color: black;
+	border-radius: 50%;
+	border: 30px dashed grey;
+	position: relative;
+	z-index: 10;
+}
+
+.wheel--left {
+	transform: translate(125px, -140px) rotate(0deg) ;
+	animation: wheel-left 10s infinite;
+}
+
+.wheel--right {
+	transform: translate(1140px, -376px) rotate(0deg) ;
+	animation: wheel-right 10s infinite;
+}
+
+

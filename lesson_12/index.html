@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homework 12</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+		</header>
+		<main class="page">
+			<!-- Translate -->
+			<div class="first">
+				<h2 class="title">Animation timing function</h2>
+				<div class="first__wrap">
+					<div class="block block--small block--timing-function-one">
+						animation-timing-function: ease;
+					</div>
+					<div class="block block--small block--timing-function-two">
+						animation-timing-function: ease-in;
+					</div>
+					<div class="block block--small block--timing-function-three">
+						animation-timing-function: ease-out;
+					</div>
+					<div class="block block--small block--timing-function-four">
+						animation-timing-function: ease-in-out;
+					</div>
+					<div class="block block--small block--timing-function-five">
+						animation-timing-function: linear;
+					</div>
+					<div class="block block--small block--timing-function-six">
+						animation-timing-function: cubic-bezier(1.000, -0.510, 0.445, 0.155);
+					</div>
+					<div class="block block--small block--timing-function-seven">
+						animation-timing-function: step-start;
+					</div>
+					<div class="block block--small block--timing-function-eight">
+						animation-timing-function: step-end;
+					</div>
+					<div class="block block--small block--timing-function-nine">
+						animation-timing-function: steps(4, end);
+					</div>
+					<div class="block block--small block--timing-function-ten">
+						animation-timing-function: steps(4, start);
+					</div>
+				</div>
+			</div>
+			<!-- Secnd -->
+			<div class="second">
+				<h2 class="title">Delay</h2>
+				<div class="block block--small block--delay-one">
+					animation-delay: 1s;
+				</div>
+				<div class="block block--small block--delay-two">
+					animation-delay: 2s;
+				</div>
+				<div class="block block--small block--delay-three">
+					animation-delay: 3s;
+				</div>
+				<div class="block block--small block--delay-four">
+					animation-delay: 4s;
+				</div>
+				<div class="block block--small block--delay-five">
+					animation-delay: -4s;
+				</div>
+			</div>
+			<!-- Third -->
+			<div class="third">
+				<h2 class="title">Animation iteration count and direction</h2>
+				<div class="block block--small block--direction-one">
+					animation-iteration-count: 3;
+				</div>
+				<div class="block block--small block--direction-two">
+					animation-iteration-count: infinite;
+				</div>
+				<div class="block block--small block--direction-three">
+					animation-iteration-count: 3;<br>
+					animation-direction: alternate;<br>
+					odd counts in normal direction<br>
+					even reverse direction
+				</div>
+				<div class="block block--small block--direction-four">
+					animation-iteration-count: 3;<br>
+					animation-direction: alternate-reverse;<br>
+					even counts in normal direction<br>
+					odd reverse direction
+				</div>
+				<div class="block block--small block--direction-five">
+					animation-iteration-count: 3;<br>
+					animation-direction: reverse;
+				</div>
+				<div class="block block--small block--direction-six">
+					animation-iteration-count: 3;<br>
+					animation-direction: normal; degfault
+				</div>
+			</div>
+			<!-- fourth -->
+			<div class="fourth">
+				<h2 class="title">animation fill mode</h2>
+				<div class="block block--small-fill block--fill-one">
+					animation-iteration-count: 1;<br>
+					animation-duration: 3s;<br>
+					animation-fill-mode: forwards;
+				</div>
+				<div class="block block--small-fill block--fill-two">
+					animation-delay: 1.5s;<br>
+					animation-duration: 3s;<br>
+					animation-fill-mode: backwards;
+				</div>
+				<div class="block block--small-fill block--fill-three">
+					animation-delay: 1.5s;<br>
+					animation-duration: 3s;<br>
+					animation-fill-mode: both;
+				</div>
+				<div class="block block--small-fill block--fill-four">
+					animation-name: move3;<br>
+					animation-delay: 1.5s;<br>
+					animation-duration: 3s;<br>
+					animation-fill-mode: none;
+					animation-play-state: paused;(hover)
+				</div>
+			</div>
+			<!-- fifth -->
+			<div class="fifth">
+				<div class="card">
+					<h2 class="title">Backface visibility</h2>
+					<div class="card__body">
+
+						<div class="card__back">
+							<img src="img/card-back.jpg" alt="front">
+						</div>
+						<div class="card__front">
+							<img src="img/card-front.jpg" alt="front">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- sixth -->
+			<div class="sixth">
+				<div class="container">
+					<div class="content">
+						<div class="content__slider">
+							<div class="content__mask">
+								<ul class="content__slide-show">
+									<li class="content__anim" id="sg01">
+										<figure>
+											<a href="#">
+												<img src="img/car/1.webp" alt="car first">
+											</a>
+											<figcaption>
+												<h2>Car first</h2>
+											</figcaption>
+										</figure>
+									</li>
+									<li class="content__anim" id="sg02">
+										<figure>
+											<a href="#">
+												<img src="img/car/2.webp" alt="car second">
+											</a>
+											<figcaption>
+												<h2>Car second</h2>
+											</figcaption>
+										</figure>
+									</li>
+									<li class="content__anim" id="sg03">
+										<figure>
+											<a href="#">
+												<img src="img/car/3.webp" alt="car third">
+											</a>
+											<figcaption>
+												<h2>Car third</h2>
+											</figcaption>
+										</figure>
+									</li>
+									<li class="content__anim" id="sg04">
+										<figure>
+											<a href="#">
+												<img src="img/car/4.webp" alt="car forth">
+											</a>
+											<figcaption>
+												<h2>Car forth</h2>
+											</figcaption>
+										</figure>
+									</li>
+									<li class="content__anim" id="sg05">
+										<figure>
+											<a href="#">
+												<img src="img/car/5.webp" alt="car fifth">
+											</a>
+											<figcaption>
+												<h2>Car fifth</h2>
+											</figcaption>
+										</figure>
+									</li>
+								</ul>
+							</div>
+							<div class="progress-bar">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div class="car-container">
+			<div class="ptero">
+				<img src="img/car/2.gif" alt="pterodactyl" class="ptero__pterodactyl">
+			</div>
+			<div class="car">
+
+				<div class="dinosur">
+					<div class="message message--dino">
+									AGGRRRRR !!!!
+								</div>
+					<img src="img/car/dinsour.gif" alt="dinosur" class="dinosur__image">
+				</div>
+				<div class="top">
+					<div class="top__item top__item--left">
+						top__left
+						<div class="door door--left">
+							<div class="saloon">
+								<div class="message message--doctor">
+									OH FROG NOT AGAIN !!!
+								</div>
+								<div class="glass glass--left">
+								</div>
+							</div>
+							<div class="door__lower-part-left">
+								<div class="door__handle-space">
+								</div>
+								<div class="door__handle">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="top__item top__item--right">
+						top__right
+						<div class="glass glass--right">
+						</div>
+					</div>
+				</div>
+				<div class="middle">
+					<div class="middle__item middle__item--top-left">
+						middle__item--top-left
+						<div class="middle__carlight">
+						</div>
+					</div>
+					<div class="middle__item middle__item--top-middle">
+						middle__item--top-middle
+					</div>
+					<div class="middle__item middle__item--top-right">
+						middle__item--top-right
+						<div class="middle__carlight middle__carlight--left">
+						</div>
+					</div>
+					<div class="middle__item middle__item--bottom-left">
+						middle__item--bottom-left
+						<div class="arc arc--left">
+						</div>
+					</div>
+					<div class="middle__item middle__item--bottom-middle">
+						middle__item--bottom-middle
+					</div>
+					<div class="middle__item middle__item--bottom-right">
+						middle__item--bottom-right
+						<div class="arc arc--right">
+						</div>
+					</div>
+				</div>
+				<div class="wheel wheel--left">
+				</div>
+				<div class="wheel wheel--right">
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<p>
+				<a href="https://github.com/YershovArt?tab=repositories" target="_blank">&copy;by YershovArt 2024&copy;</a>
+			</p>
+		</footer>
+	</div>
+
+</body>
+
+</html>
