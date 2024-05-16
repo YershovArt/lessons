@@ -122,7 +122,8 @@
 	height: 0;
 	opacity: 0;
 	visibility: hidden;
-	z-index: 2;
+	z-index: 5;
+	background-color: #fff;
 }
 
 .hidden-language {
