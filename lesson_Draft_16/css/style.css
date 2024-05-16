@@ -122,6 +122,7 @@
 	height: 0;
 	opacity: 0;
 	visibility: hidden;
+	z-index: 2;
 }
 
 .hidden-language {
