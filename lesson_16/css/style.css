@@ -520,9 +520,6 @@
 	justify-content: flex-end;
 }
 
-
-.bottom-header__list-item {}
-
 .bottom-header__list-item a {
 	transition: color .4s ease;
 }
@@ -712,17 +709,6 @@
 
 @media (max-width: 600px) {
 	.catalog-open .dropdown-menu-catalog {
-		width: 90%;
-		border-radius: 8px;
-	}
-
-	.dropdown-menu-catalog__list:hover .hidden-dropdown-menu-catalog {
-		width: 100%;
-	}
-}
-
-@media (max-width: 480px) {
-	.catalog-open .dropdown-menu-catalog {
 		width: 100%;
 		border-radius: 0;
 		/* padding: 10px 35px; */
@@ -776,8 +762,6 @@
 
 
 /* ------ main ---------- */
-.section {}
-
 .section--categories {
 	margin-bottom: 70px;
 }
@@ -828,8 +812,6 @@
 	flex-direction: column;
 	position: relative;
 }
-
-.categories__item {}
 
 /* Додав згідно рекомендації #5  */
 .categories__item:after {
