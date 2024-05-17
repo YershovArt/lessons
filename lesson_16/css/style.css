@@ -707,7 +707,7 @@
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600.98px) {
 	.catalog-open .dropdown-menu-catalog {
 		width: 100%;
 		border-radius: 0;
