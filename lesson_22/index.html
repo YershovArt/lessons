@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homework_22</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+		</header>
+		<main class="page">
+			<section class="task-1">
+				<div class="task-1__container">
+					<h2 class="task-1__tile title-secondary">Задача №1</h2>
+					<p class="task-1__text par-text">Що потрапить в консоль?</p>
+					<pre class="task-1__pre all-pre">
+					<code>
+		let someVar = 0;
+		++someVar;		
+		if (someVar) {
+		console.log(someVar);
+		}
+					</code>
+				</pre>
+					<p class="task-1__text  par-text">У консоль потрапить 1, так як ікремент збільшує number
+						на 1, а
+						префіксний одразу повертає збільшене
+						значення. </p>
+				</div>
+			</section>
+			<section class="task-2">
+				<div class="task-2__container">
+					<h2 class="task-2__tile title-secondary">Задача №2</h2>
+					<p class="task-2__text par-text">
+						Задача №2
+						За допомогою циклу FOR виведіть в консоль 10 рядків:
+						Пункт №1
+						Пункт №2
+						і т.д.</p>
+
+					<pre class="task-2__pre all-pre">
+							<code>
+		for (let i = 1; i &#60;= 10; i++) {
+
+			console.log(`Пункт №${i}` );
+
+		}
+		Пункт №1
+		Пункт №2
+		Пункт №3
+		Пункт №4
+		Пункт №5
+		Пункт №6
+		Пункт №7
+		Пункт №8
+		Пункт №9
+		Пункт №10
+							</code>
+						</pre>
+				</div>
+			</section>
+			<section class="task-3">
+				<div class="task-3__container">
+					<h2 class="task-3__tile title-secondary">Задача №3</h2>
+					<p class="task-3__text par-text">
+						Що потрапить в консоль ?
+						if (2 * 20 &#60;= 10 || 30 / 2 &#60; 5 && 10 &#60;="10" || 20==="20" ) { console.log('000'); } і т.д.
+					</p>
+					<table>
+						<thead>
+							<tr>
+								<th>
+									Приорітет
+								</th>
+								<th>
+									Тип оператора
+								</th>
+								<th>
+									Ассоціативність
+								</th>
+								<th>
+									Символ
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									12
+								</td>
+								<td>
+									Множення
+								</td>
+								<td>
+									слева направо
+								</td>
+								<td>
+									*
+								</td>
+							</tr>
+							<tr>
+								<td>
+									12
+								</td>
+								<td>
+									Ділення
+								</td>
+								<td>
+									слева направо
+								</td>
+								<td>
+									/
+								</td>
+							</tr>
+							<tr>
+								<td>
+									9
+								</td>
+								<td>
+									Меньше і меньше або равно
+								</td>
+								<td>
+									слева направо
+								</td>
+								<td>
+									&#60; і &#60;=
+								</td>
+							</tr>
+							<tr>
+								<td>
+									8
+								</td>
+								<td>
+									Суворе равенство (===)
+								</td>
+								<td>
+									слева направо
+								</td>
+								<td>
+									===
+								</td>
+							</tr>
+							<tr>
+								<td>
+									4
+								</td>
+								<td>
+									Логічне і
+								</td>
+								<td>
+									слева направо
+								</td>
+								<td>
+									&#38;
+								</td>
+							</tr>
+							<tr>
+								<td>
+									3
+								</td>
+								<td>
+									Логічне або
+								</td>
+								<td>
+									слева направо
+								</td>
+								<td>
+									||
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="par-text">
+						<ol class="list">
+							<li class="list__item">
+								Виконається 2 * 20 = 40 (Приорітет + зліва на право асоциативність)
+							</li>
+							<li class="list__item">
+								Виконається 30 / 2 = 15 (Приорітет + зліва на право асоциативність тому післе множення)
+							</li>
+							<li class="list__item">
+								Виконається 15 &#60; 5 поверне false (Приорітет + зліва на право асоциативність)
+							</li>
+							<li class="list__item">
+								Виконається 10 &#60;="10" поверне true (Приорітет + зліва на право асоциативність і ця
+								перевірка здійснить перетворення типів)
+							</li>
+							<li class="list__item">
+								Виконається 20 ==="20" поверне false (Приорітет + зліва на право асоциативність + порівняє типи
+								суворе порівняння і поверне false)
+							</li>
+							<li class="list__item">
+								Виконається 20 ==="20" поверне false (Приорітет + зліва на право асоциативність + порівняє типи
+								суворе порівняння і поверне false)
+							</li>
+							<li class="list__item">
+								Виконається false && true (Приорітет + порівняє і поверне false логічне && між true false
+								повертає false)
+							</li>
+							<li class="list__item">
+								Виконається false || false (Приорітет + зліва на право асоциативність тому виконаэться перший з
+								ліва оператор і поверне другий false )
+							</li>
+							<li class="list__item">
+								Виконається false || false (Приорітет + зліва на право асоциативність тому виконається останній
+								з ліва оператор і поверне другий false)
+							</li>
+						</ol>
+					</div>
+					<p class="task-3__text par-text">
+						Що потрапить в консоль ?
+						Нічого.
+					</p>
+				</div>
+			</section>
+			<section class="task-4">
+				<div class="task-4__container">
+					<h2 class="task-4__tile title-secondary">Задача №4</h2>
+					<p class="task-4__text par-text">Створіть функцію, яка повертає результат ділення числа a на число b з
+						додаванням рядка "Результат ділення: "
+						Викличте функцію передаючі різні значення, у тому числі не передаючи зовсім.
+						Функція не має повертати NaN, Infinite або помилку</p>
+					<pre class="task-4__pre all-pre">
+					<code>
+function getDivisionResult(a=0, b=0) {
+	if (!Number.isFinite(a) && !Number.isFinite(b)) {
+		return "Please input correct data for division, numbers only allowed";
+	} else if (b === 0 && a === 0) {
+		return "Please input some data for division";
+	} else if (b === 0 && a !==0) {
+		return "You cant divide on zero";
+	}
+	
+	return `Результат ділення: ${a/b}`
+}
+		
+		console.log(getDivisionResult(1, 0));
+					</code>
+				</pre>
+					<p class="task-4__text  par-text">
+						1. Проводиться перевірка на тип данних, присутнысть данних, і на ділення на нуль.
+					</p>
+				</div>
+			</section>
+			<section class="task-5">
+				<div class="task-5__container">
+					<h2 class="task-5__tile title-secondary">Задача №5</h2>
+					<p class="task-5__text par-text">
+						Створіть масив даних - 5 елементів, один з яких число 10.
+						Обробіть масив за допомогою методу перебору
+						Перевіряйте елемент на відповідність числу 10, та у разі відповідності, виводьте в консоль
+					</p>
+					<pre class="task-5__pre all-pre">
+					<code>
+function returnTen(arr, decimal) {
+
+if (Array.isArray(arr) && Number.isFinite(decimal) && arr.length > 0) {
+		arr.includes(decimal) ? console.log(`You have ${decimal} 
+		in position №${arr.indexOf(decimal)} in array.`)
+		: console.log(`It is no ${decimal} in array!`);
+	}
+}
+let arr = [1, NaN, false, 'privet', 10];
+						
+returnTen(arr, 10)
+					</code>
+				</pre>
+					<p class="task-5__text  par-text">
+						1. Проводиться первірка на наявність массива, 
+						на те що параметр котрий передається є массив,
+						і перевірка числа яке шукається у массиві.
+					</p>
+				</div>
+			</section>
+		</main>
+		<footer class=" footer">
+			<p class="footer__text">by Yershov Art 2024</p>
+		</footer>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
