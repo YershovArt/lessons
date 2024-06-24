@@ -40,8 +40,6 @@
 	align-items: flex-start;
 	/* Додав згідно рекомендації #1 gap*/
 	column-gap: 20px;
-	/* Додав згідно рекомендації #2 wrap*/
-	/* flex-wrap: wrap; */
 }
 
 .top-header__nav {
@@ -84,6 +82,17 @@
 
 .top-header__info .top-header__list-item:first-child {
 	margin-right: 10px;
+}
+/* Урок 16 переробив іконки   */
+.top-header__list-item--icon {
+	width: 30px;
+	height: 30px;
+}
+
+.top-header__list-item--icon img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .image-link .top-header__icon {
@@ -241,15 +250,14 @@
 	z-index: 2;
 	position: relative;
 }
-
+/* Урок 16 зауваження 2 до логотипу */
 .logo--dimensions {
-	margin-right: 5px;
-	width: 250px;
+	flex-basis: 250px;
 	margin-right: 4px;
 }
 
 .logo--dimensions img {
-	width: 250px;
+	aspect-ratio: 250/50; /* 250/50 */
 }
 
 .button {
@@ -386,7 +394,17 @@
 	display: none;
 }
 
+/* Урок 16 переробив іконки   */
+.contacts__link-phone  {
+	width: 50px;
+	height: 50px;
+	transition: transform .7s ease;
+}
+/* Урок 16 переробив іконки   */
 .contacts__link-phone img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	transition: transform .7s ease;
 }
 
@@ -434,7 +452,15 @@
 	display: none;
 }
 
+.buy-icons__link-icon {
+	width: 50px;
+	height: 50px;
+}
+
 .buy-icons__link-icon .buy-icons__icon {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	transition: transform .5s ease, opacity .5s ease;
 }
 
@@ -493,10 +519,6 @@
 .bottom-header__items {
 	display: flex;
 	justify-content: space-between;
-	/* Додав згідно рекомендації #2 wrap*/
-	/* flex-wrap: wrap; */
-	/* Додав згідно рекомендації #1 row-gap: 10px;
-	column-gap: 10px;*/
 	align-items: start;
 	row-gap: 20px;
 	column-gap: 20px;
@@ -504,8 +526,6 @@
 
 .bottom-header__item {
 	display: flex;
-	/* Додав згідно рекомендації #1 row-gap: 40px;
-	column-gap: 10px;*/
 	column-gap: 40px;
 	row-gap: 10px;
 	/* Додав згідно рекомендації #2 wrap*/
@@ -661,7 +681,6 @@
 	background-color: #fff;
 	opacity: 0;
 	visibility: hidden;
-	/* pointer-events: none; */
 	overflow: auto;
 }
 
@@ -846,11 +865,11 @@
 	opacity: 1;
 	visibility: visible;
 }
-
+/* Урок 16 зауваження №3 змінив задній фон відповідно до зауваження  */
 .categories__item-decor {
 	position: absolute;
-	width: 280px;
-	height: 280px;
+	width: 112%;
+	height: 93.35%;
 	left: -5%;
 	top: 35%;
 	border-radius: 50%;
@@ -866,14 +885,18 @@
 	column-gap: 15px;
 	padding: 20px;
 	width: 100%;
+	z-index: 1;
 }
 
 .categories__info :first-child {
 	flex: 1 1 210px;
 }
-
+/* Урок 16 вніс зміни  зробив нормальне адаптивне зображення*/
 .categories__image {
 	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	aspect-ratio: 250/300;
 	border-radius: 8px;
 	position: relative;
 	z-index: 1;
@@ -927,6 +950,11 @@
 
 .goods__item .goods__picture {
 	transition: transform .5s ease;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	aspect-ratio: 260/220;
+	border-radius: 8px;
 }
 
 .goods__item:hover .goods__picture {
@@ -975,6 +1003,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	column-gap: 10px;
+	row-gap: 5px;
 }
 
 .goods__price {
@@ -1080,7 +1110,14 @@
 /* .promotions-section__link:hover img {
 	transition: transform .4s ease-in-out;
 } */
+
+/* Урок 16 вказав адаптив для картинок */
 .promotions-section__link img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	aspect-ratio: 410/280;
+	border-radius: 8px;
 	transition: transform .4s ease-in-out;
 }
 
@@ -1094,15 +1131,46 @@
 }
 
 /* media main */
+/* Урок 16 пвикористав відсоткові значення щоб не було проміжків */
 @media (max-width: 1319px) {
 	.categories__link-item {
-		flex: 0 1 300px;
+		flex: 0 1 19%;
+	}
+}
+
+@media (max-width: 1200px) {
+	.categories__link-item {
+		flex: 0 1 24%;
+	}
+	
+}
+
+@media (max-width: 940px) {
+	.categories__link-item {
+		flex: 0 1 32%;
+		
+	}
+	.title {
+		font-size: 36px;
+	}
+}
+@media (max-width: 698.99px) {
+	.categories__link-item {
+		flex: 0 1 48%;
+	}
+
+	.title {
+		font-size: 32px;
 	}
 }
 
 @media (max-width: 480.98px) {
 	.categories__link-item {
-		flex: 0 1 200px;
+		flex: 0 1 100%;
+	}
+
+	.title {
+		font-size: 30px;
 	}
 
 	.goods__title .wrapper-headline .link-title {
@@ -1122,9 +1190,7 @@
 		justify-content: space-between;
 	}
 }
-
 /* categories__link-item */
-
 
 /* media top */
 
@@ -1134,7 +1200,7 @@
 	}
 }
 
-@media (max-width: 800.98px) {
+@media (max-width: 810.98px) {
 	.top-header__nav._dynamic_adapt_ {
 		flex-direction: column;
 		row-gap: 40px;
@@ -1323,9 +1389,13 @@
 		width: 137px;
 		flex-shrink: 0;
 	}
+/* Урок 16 далі працюю з хедером*/
 
+.logo--dimensions  {
+	flex-basis: 168px;
+}
 	.logo--dimensions img {
-		width: 200px;
+		aspect-ratio: 250/50;
 	}
 }
 
@@ -1339,15 +1409,15 @@
 		padding-top: 70px;
 	}
 }
-
+/* Урок 16 робота з хедером */
 @media (max-width: 480.98px) {
 	.logo--dimensions {
-		width: 215px;
+		flex-basis: 215px;
 	}
 
 	.logo--dimensions img {
-		width: 215px;
-		height: 36px;
+		aspect-ratio: 215/36;
+		width: 100%;
 	}
 
 	.contacts__number {
@@ -1395,14 +1465,14 @@
 	}
 }
 
-@media (max-width: 800.98px) {
+@media (max-width: 810.98px) {
 	.bottom-header__item._dynamic_adapt_ {
 		flex-direction: column;
 		row-gap: 40px;
 	}
 }
 
-@media (max-width: 790.98px) {
+@media (max-width: 810.98px) {
 	.bottom-header {
 		display: block;
 	}

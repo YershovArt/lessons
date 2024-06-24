@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homework_24</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+		</header>
+		<main class="page">
+			<section class="task-1">
+				<div class="task-1__container">
+					<h2 class="task-1__tile title-secondary">Задача №1
+					</h2>
+					<p class="task-1__text par-text">Дано в html: три елементи з класом item.
+						При кліку на кожен з елментів додати клас active,
+						при повторному кліку прибрати клас</p>
+					<pre class="task-1__pre all-pre">
+					<code>
+function addActive(e) {
+	const targetE = e.target;
+	if (targetE.closest('.item')) targetE.classList.toggle('active');
+}
+						
+document.querySelector('.box').addEventListener('click', addActive);
+					</code>
+				</pre>
+					<div class="task-demo">
+						<ul class="box">
+							<li class="item">first item</li>
+							<li class="item">second item</li>
+							<li class="item">third item</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="task-2">
+				<div class="task-2__container">
+					<h2 class="task-2__tile title-secondary">Задача №2
+					</h2>
+					<p class="task-2__text par-text">Дано в html: три елементи з класом item.
+						Дано в css/scss: body прозорий
+						При повному завантаженню сторінки додати клас до body який прибирає прозорість.</p>
+					<pre class="task-2__pre all-pre">
+					<code>
+const bodyItem = document.body;
+window.addEventListener('load', function () {
+	setTimeout(function() {
+		bodyItem.classList.add('see');
+	}, 3000);
+})
+					</code>
+				</pre>
+				</div>
+			</section>
+			<section class="task-3">
+				<div class="task-3__container">
+					<h2 class="task-3__tile title-secondary">Задача №3
+					</h2>
+					<p class="task-3__text par-text">
+						Дано в html: header main footer
+						Пи наведенні курсору на header змінювати колір фону у footer.
+						Коли курсор йде з header повертати початковий фон для footer.
+					</p>
+					<pre class="task-3__pre all-pre">
+					<code>
+const foot = document.querySelector('.foot');
+const head = document.querySelector('.head');
+						
+function changeColor(e) {
+	if (e.target.closest('.head') && foot && e.type === 'mouseover') {
+		foot.classList.add('white');
+	} else if (e.type === 'mouseleave') {
+		foot.classList.remove('white');
+	}
+}
+						
+head.addEventListener('mouseover', changeColor);
+head.addEventListener('mouseleave', changeColor);
+					</code>
+				</pre>
+					<div class="task-demo task-3-demo">
+						<ul class="box-3">
+							<li class="head">header</li>
+							<li class="mid">main</li>
+							<li class="foot">footer</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="task-4">
+				<div class="task-4__container">
+					<h2 class="task-4__tile title-secondary">Задача №4
+					</h2>
+					<p class="task-4__text par-text" >
+						Дано в html: текст, елемент з класом item, текст. Так, що елемент з класом item за межами в'юпотрта.
+						Створити функцію яка будує інтервал який буде змінювати контент в елементі item виводячи цифру яка збільшується на одиницю: 1 2 3 ... і т.д.
+						Затримка між зміною числа, та до якого числа має працювати інтервал має задаватись в дата атрибутах елемента item.
+						Функція має запустатить коли ми доскролюємо до елементу item (його видно), і не запускатись повторно.
+					</p>
+					<pre class="task-4__pre all-pre">
+					<code>
+function changeElementContent() {
+	let elementToChange = document.querySelector('.tusk-4-text');
+	let duration = elementToChange.dataset.delay;
+	let limit = +elementToChange.dataset.num
+	let iteration = 0;
+	const options = {
+		root: null,
+		rootMargin: "0px 0px 0px 0px",
+		// Відсоток від розміру об'єкту.
+		// При появі якого спрацьовує подія
+		// Де 0 це будь яка поява
+		// 100 це повна поява об'кта в в'юпорті
+		threshold: 1,
+	}
+	const callback = (entries, observer) => {
+		entries.forEach(entry => {
+			const currentElement = entry.target
+			if (entry.isIntersecting && iteration &lt; limit) {
+				let timer = setInterval(() => {
+					elementToChange.textContent = iteration;
+					iteration ===limit ? clearInterval(timer) : null;
+					++iteration;
+				}, duration);
+			}
+		})
+	}
+	const observer = new IntersectionObserver(callback, options)
+	observer.observe(elementToChange);
+}
+						
+changeElementContent();
+					</code>
+				</pre>
+					<div class="task-demo task-4-demo">
+						<p class="tusk-4-text" data-delay="100" data-num="7">
+						0
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class=" footer">
+			<p class="footer__text">by Yershov Art 2024</p>
+		</footer>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

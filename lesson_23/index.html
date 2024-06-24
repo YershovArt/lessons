@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homework_23</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+		</header>
+		<main class="page">
+			<section class="task-1">
+				<div class="task-1__container">
+					<h2 class="task-1__tile title-secondary">Задача №1</h2>
+					<p class="task-1__text par-text">Отримати в константу елемент &#60;body&#62;</p>
+					<pre class="task-1__pre all-pre">
+					<code>
+		const bodyItem = document.body;
+					</code>
+				</pre>
+					<p class="task-1__text  par-text"></p>
+				</div>
+			</section>
+			<section class="task-2">
+				<div class="task-2__container">
+					<h2 class="task-2__tile title-secondary">Задача №2</h2>
+					<p class="task-2__text par-text">
+						Написати функцію, яка додає в
+
+						&#60;body&#62; список UL
+						з певною кількістю LI (кількість має передаватись як параметр функції, також мати значення за
+						замовченням)
+					</p>
+
+					<pre class="task-2__pre all-pre">
+							<code>
+function createList(num = 1) {
+	if (Number.isFinite(+num) && typeof num !== 'boolean' && num) {
+		const listWrap = document.createElement('ul');
+		for (let i = 0; i &#60; num; i++) {
+			let listItem = document.createElement('li');
+			listItem.textContent = `list item ${i + 1}`;
+			listWrap.insertAdjacentElement('beforeend', listItem);
+								
+		}
+		bodyItem.insertAdjacentElement('afterbegin', listWrap)
+	} else {
+		const warning = document.createElement('h1');
+		warning.textContent = 'numbers only please';
+		bodyItem.insertAdjacentElement('afterbegin', warning)
+		console.log('Numbers only please');
+	}
+}
+								
+createList(15);						
+							</code>
+						</pre>
+				</div>
+			</section>
+			<section class="task-3">
+				<div class="task-3__container">
+					<h2 class="task-3__tile title-secondary">Задача №3</h2>
+					<p class="task-3__text par-text">
+						Додати до елементу
+						&#60;body&#62; класс loaded.
+						Потім перевірити чи є клас loaded у елемента
+						&#60;body&#62;
+						і, якщо є, додати стиль кольору тесту зедлений
+					</p>
+					<pre class="task-3__pre all-pre">
+							<code>
+	bodyItem.classList.add('loaded');
+	bodyItem.classList.contains('loaded') ? bodyItem.style.color = 'green' : false;					
+							</code>
+						</pre>
+				</div>
+			</section>
+			<section class="task-4">
+				<div class="task-4__container">
+					<h2 class="task-4__tile title-secondary">Задача №4</h2>
+					<p class="task-4__text par-text">
+
+						Дано в html: три елементи з класом item.
+						Треба отримати ці елементи в константу, кожному додати клас active,
+						та перезаписати контент всередені кожного елемента на "Елемент №(тут порядковий номер елементу
+						починаючи з 1)".
+					<div class="item par-text"></div>
+					<div class="item par-text"></div>
+					<div class="item par-text"></div>
+					</p>
+					<pre class="task-4__pre all-pre">
+							<code>
+	const itemSelect = document.querySelectorAll('.item');
+	let i = 0;
+	for (const iterator of itemSelect) {
+		iterator.classList.add('active');
+		iterator.textContent = `Елемент № ${++i}`;
+	}
+												
+							</code>
+						</pre>
+				</div>
+			</section>
+			<section class="task-5">
+				<div class="task-5__container">
+					<h2 class="task-5__tile title-secondary">Задача №5</h2>
+					<p class="task-5__text par-text">
+						Дано в html: текст, далі кнопка з класом button.
+						Треба прокрутити скрол сторінки до кнопки
+					</p>
+					<pre class="task-5__pre all-pre">
+							<code>
+const button = document.querySelector('.button')
+function scrollBlock(element) {
+	const block = element.dataset.scroll;
+	element.scrollIntoView({
+		block: block,
+		inline: 'nearest',
+		behavior: 'smooth',
+	});
+}			
+scrollBlock(button);								
+							</code>
+						</pre>
+					<div class="task-demo">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fuga cumque numquam dolorum
+						vitae beatae officiis cum reprehenderit deserunt. Pariatur consectetur est porro error? Labore culpa
+						qui amet delectus reprehenderit, porro at doloremque accusamus fuga voluptatum ut dolorum consequuntur
+						illo inventore reiciendis laborum aut. Veniam nobis ipsam suscipit, consequatur qui tempore laudantium
+						esse alias ut eos blanditiis dignissimos mollitia praesentium deserunt asperiores maxime pariatur
+						nulla corrupti quas deleniti cupiditate harum. Tenetur, expedita. Exercitationem unde excepturi magni
+						quae rerum, sit ducimus enim laboriosam a! Dolorem sed maiores esse placeat animi recusandae numquam
+						id, magnam quae rem at ullam nobis labore sit! Ab dolorem ipsam excepturi fugit, rerum accusantium
+						iure non facilis doloribus quisquam cumque ducimus, dolorum quidem commodi rem recusandae. Laboriosam
+						dolorum minus explicabo veniam dicta quia, deleniti earum ratione asperiores, incidunt aut, labore
+						consequatur ipsam quos eius. Unde asperiores dolore deserunt suscipit, placeat reiciendis provident?
+						Quasi amet, porro harum recusandae consequuntur impedit excepturi iusto nam quidem? Doloribus cumque
+						accusantium distinctio tempore, velit, laboriosam magni saepe explicabo reiciendis dolore quae veniam
+						error illo eum in a. Est at, quia mollitia obcaecati nostrum ea. Molestiae corporis vero quis, dolor
+						quae corrupti rem, consectetur asperiores fuga doloremque velit quos. Officiis culpa ut totam!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fuga cumque numquam dolorum
+						vitae beatae officiis cum reprehenderit deserunt. Pariatur consectetur est porro error? Labore culpa
+						qui amet delectus reprehenderit, porro at doloremque accusamus fuga voluptatum ut dolorum consequuntur
+						illo inventore reiciendis laborum aut. Veniam nobis ipsam suscipit, consequatur qui tempore laudantium
+						esse alias ut eos blanditiis dignissimos mollitia praesentium deserunt asperiores maxime pariatur
+						nulla corrupti quas deleniti cupiditate harum. Tenetur, expedita. Exercitationem unde excepturi magni
+						quae rerum, sit ducimus enim laboriosam a! Dolorem sed maiores esse placeat animi recusandae numquam
+						id, magnam quae rem at ullam nobis labore sit! Ab dolorem ipsam excepturi fugit, rerum accusantium
+						iure non facilis doloribus quisquam cumque ducimus, dolorum quidem commodi rem recusandae. Laboriosam
+						dolorum minus explicabo veniam dicta quia, deleniti earum ratione asperiores, incidunt aut, labore
+						consequatur ipsam quos eius. Unde asperiores dolore deserunt suscipit, placeat reiciendis provident?
+						Quasi amet, porro harum recusandae consequuntur impedit excepturi iusto nam quidem? Doloribus cumque
+						accusantium distinctio tempore, velit, laboriosam magni saepe explicabo reiciendis dolore quae veniam
+						error illo eum in a. Est at, quia mollitia obcaecati nostrum ea. Molestiae corporis vero quis, dolor
+						quae corrupti rem, consectetur asperiores fuga doloremque velit quos. Officiis culpa ut totam!
+						<button type="button" class="button">my name is button</button>
+					</div>
+				</div>
+			</section>
+			<section class="task-6">
+				<div class="task-6__container">
+					<h2 class="task-6__tile title-secondary">Задача №6</h2>
+					<p class="task-6__text par-text">
+						Дано в html: посилання з класом link
+						Треба додати до посилання дата атрибут зі значенням 100
+						Поім отримати значення трибуту, та, якщо значення меньше 200
+						пофарбувати колір тексту посилання в червоний
+					</p>
+					<pre class="task-6__pre all-pre">
+							<code>
+
+const linkData = document.querySelector('.link');
+linkData.dataset.num &#60; 200 ? linkData.style.color = 'red' : false;								
+							</code>
+
+		
+						</pre>
+					<div class="task-demo">
+					<a class="link" data-num="100">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fuga cumque numquam dolorum
+							vitae beatae officiis cum reprehenderit deserunt. Pariatur consectetur est porro error? Labore culpa
+					</a>
+						
+						
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class=" footer">
+			<p class="footer__text">by Yershov Art 2024</p>
+		</footer>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
