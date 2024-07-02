@@ -133,7 +133,7 @@ textarea {
   position: relative;
 }
 .top-header__container {
-  border-bottom: 1px solid #E3E3E3;
+  border-bottom: 0.0625rem solid #E3E3E3;
 }
 .top-header__items {
   display: -webkit-box;
@@ -371,8 +371,8 @@ textarea {
 }
 @media (max-width: 84.375em) {
   .hero__info {
-    padding-top: calc(0px + 74 * (100vw - 41.875rem) / 680);
-    padding-bottom: calc(0px + 94 * (100vw - 41.875rem) / 680);
+    padding-top: calc(0rem + 74 * (100vw - 41.875rem) / 680);
+    padding-bottom: calc(0rem + 94 * (100vw - 41.875rem) / 680);
   }
 }
 @media (max-width: 30rem) {
@@ -705,7 +705,7 @@ textarea {
 .goods__box {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
-  gap: 24px;
+  gap: 1.5rem;
 }
 @media (max-width: 34.74875em) {
   .goods__box {
@@ -782,7 +782,7 @@ textarea {
   -webkit-margin-after: 3.4375rem;
           margin-block-end: 3.4375rem;
 }
-@media (max-width: 1350px) {
+@media (max-width: 84.375em) {
   .about__text {
     -webkit-margin-after: calc(0.9375rem + 40 * (100vw - 21.5rem) / 1006);
             margin-block-end: calc(0.9375rem + 40 * (100vw - 21.5rem) / 1006);
@@ -845,7 +845,7 @@ textarea {
           margin-block-end: 3.75rem;
   text-align: center;
 }
-@media (max-width: 1350px) {
+@media (max-width: 84.375em) {
   .social__title {
     -webkit-margin-after: calc(1.5625rem + 35 * (100vw - 21.5rem) / 1006);
             margin-block-end: calc(1.5625rem + 35 * (100vw - 21.5rem) / 1006);
@@ -1160,7 +1160,7 @@ textarea {
   transition: all 0.5s ease-in-out;
 }
 .yes-form .form--dissapear {
-  inset-inline-start: 0px;
+  inset-inline-start: 0rem;
 }
 
 .form {
@@ -1274,10 +1274,10 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
-  row-gap: 10px;
+  -webkit-column-gap: 0.625em;
+     -moz-column-gap: 0.625em;
+          column-gap: 0.625em;
+  row-gap: 0.625em;
 }
 @media (max-width: 32.56125em) {
   .filter {
@@ -1362,7 +1362,7 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 18px;
+  gap: 1.125rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -1378,8 +1378,8 @@ textarea {
 }
 .product-card__promotions {
   position: absolute;
-  top: 22px;
-  left: 0;
+  inset-block-start: 1.375rem;
+  inset-inline-start: 0;
 }
 .product-card__image {
   inline-size: 100%;
